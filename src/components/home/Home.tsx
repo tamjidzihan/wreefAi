@@ -1,10 +1,10 @@
-import { Flex, VStack, Button, HStack, Stat, StatLabel, StatNumber, Text, Box, Image, Container, useColorModeValue } from '@chakra-ui/react';
+import { Box, Button, Flex, HStack, Image, Stat, StatLabel, StatNumber, Text, VStack } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import AnimatedNumber from '../animation/number';
-import avater1 from '../../assets/avater1.jpg'
-import avater2 from '../../assets/avater2.jpg'
-import avater3 from '../../assets/avater3.jpg'
-import avater4 from '../../assets/avater4.jpg'
+import TopCreators from './TopCreators';
+import { GoNorthStar } from "react-icons/go";
+import HeroCard from './HeroCard';
+
 
 const MotionBox = motion(Box);
 const MotionText = motion(Text);
@@ -14,7 +14,6 @@ const MotionFlex = motion(Flex);
 const MotionVStack = motion(VStack);
 const MotionHStack = motion(HStack);
 const MotionStat = motion(Stat);
-const MotionContainer = motion(Container);
 
 const Home = () => {
     return (
@@ -41,7 +40,7 @@ const Home = () => {
                         NFT MARKET
                     </MotionText>
                     <MotionText fontSize="6xl" fontWeight="bold">
-                        Create your own NFT gallery
+                        Create your own NFT <Text as='u'>gallery</Text>
                     </MotionText>
                     <MotionText fontSize="2xl">
                         NFT Marketplace brings artists and creators together on a single platform.
@@ -59,29 +58,38 @@ const Home = () => {
                     </MotionButton>
 
                     <MotionHStack spacing={12} mt={8} >
+
                         <MotionStat initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3, duration: 0.5 }}>
                             <StatNumber>
                                 <AnimatedNumber from={0} to={44} />
-                                K</StatNumber>
-
-                            <StatLabel>Art Work</StatLabel>
+                                K
+                            </StatNumber>
+                            <StatLabel>ArtWork</StatLabel>
                         </MotionStat>
+
+                        <GoNorthStar color='gold' fontSize='20px' />
+
                         <MotionStat initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6, duration: 0.5 }}>
                             <StatNumber>
                                 <AnimatedNumber from={0} to={65} />
-                                k</StatNumber>
+                                k
+                            </StatNumber>
                             <StatLabel>Artist</StatLabel>
                         </MotionStat>
+
+                        <GoNorthStar color='gold' fontSize='20px' />
+
                         <MotionStat initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9, duration: 0.5 }}>
                             <StatNumber>
-                                <AnimatedNumber from={0} to={90} />k+
+                                <AnimatedNumber from={0} to={90} />
+                                k+
                             </StatNumber>
                             <StatLabel>Auction</StatLabel>
                         </MotionStat>
                     </MotionHStack>
                 </MotionVStack>
 
-                <MotionBox
+                {/* <MotionBox
                     mt={{ base: 10, lg: 0 }}
                     boxShadow="xl"
                     borderRadius="lg"
@@ -90,7 +98,7 @@ const Home = () => {
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <MotionImage src="/path/to/image.jpg" alt="NFT Image" />
+                    <MotionImage src="#" alt="NFT Image" />
                     <MotionBox p={5} initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }}>
                         <Text fontWeight="bold" fontSize="lg">SPACE SONG</Text>
                         <Text>Remaining Time: 12h:35m:20s</Text>
@@ -109,72 +117,13 @@ const Home = () => {
                             Place A Bid
                         </Button>
                     </MotionBox>
-                </MotionBox>
+                </MotionBox> */}
+                <HeroCard />
+
             </MotionFlex>
-            <MotionBox
-                mt={10}
-                mx={20}
-                py={5}
-                borderRadius="lg"
-                bg={useColorModeValue('RGBA(0, 0, 0, 0.06)', 'RGBA(0, 0, 0, 0.36)')}
-                // borderRadius='40px'
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
-            >
-                <MotionText mx={12} mb={5}>Top Creator of this week</MotionText>
 
-                <MotionFlex justify='space-around' align="center" direction={{ base: 'column', md: 'row' }}>
-                    <MotionVStack
-                        initial={{ scale: 0.9 }}
-                        animate={{ scale: 1 }}
-                        transition={{ duration: 0.5 }}
-                        flexDirection={{ base: 'column', lg: 'row' }}>
-                        <Image borderRadius="full" boxSize="100px" src={avater1} alt="Ingrid" />
-                        <Box>
-                            <Text>Ingrid</Text>
-                            <Text>$<AnimatedNumber from={0} to={16890} /></Text>
-                        </Box>
-                    </MotionVStack>
+            <TopCreators />
 
-                    <MotionVStack
-                        initial={{ scale: 0.9 }}
-                        animate={{ scale: 1 }}
-                        transition={{ duration: 0.5 }}
-                        flexDirection={{ base: 'column', lg: 'row' }}>
-                        <Image borderRadius="full" boxSize="100px" src={avater2} alt="Sash" />
-                        <Box>
-                            <Text>Sash</Text>
-                            <Text>$ <AnimatedNumber from={0} to={8876} /></Text>
-                        </Box>
-                    </MotionVStack>
-
-                    <MotionVStack
-                        initial={{ scale: 0.9 }}
-                        animate={{ scale: 1 }}
-                        transition={{ duration: 0.5 }}
-                        flexDirection={{ base: 'column', lg: 'row' }}>
-                        <Image borderRadius="full" boxSize="100px" src={avater3} alt="John" />
-                        <Box>
-                            <Text>John</Text>
-                            <Text>$<AnimatedNumber from={0} to={7876} /></Text>
-                        </Box>
-                    </MotionVStack>
-
-                    <MotionVStack
-                        initial={{ scale: 0.9 }}
-                        animate={{ scale: 1 }}
-                        transition={{ duration: 0.5 }}
-                        flexDirection={{ base: 'column', lg: 'row' }}>
-                        <Image borderRadius="full" boxSize="100px" src={avater4} alt="Karafu" />
-                        <Box>
-                            <Text>Karafu</Text>
-                            <Text>$ <AnimatedNumber from={0} to={10876} /></Text>
-                        </Box>
-                    </MotionVStack>
-
-                </MotionFlex>
-            </MotionBox>
         </MotionBox>
     );
 }
