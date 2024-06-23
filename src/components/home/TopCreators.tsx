@@ -1,11 +1,10 @@
-
 import { Box, Flex, Image, Text, VStack, useColorModeValue } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import avater1 from '../../assets/avater1.jpg'
 import avater2 from '../../assets/avater2.jpg'
 import avater3 from '../../assets/avater3.jpg'
 import avater4 from '../../assets/avater4.jpg'
-import AnimatedNumber from '../animation/number'
+import AnimatedNumber from '../animation/AnimatedNumber'
 
 const MotionBox = motion(Box);
 const MotionText = motion(Text);

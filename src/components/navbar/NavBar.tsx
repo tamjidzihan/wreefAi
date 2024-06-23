@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import ColorModeSwitch from './ColorModeSwitch';
 import logo_dark from '../../assets/logoicon_dark@1x.png';
 import logo_light from '../../assets/logoicon_light@1x.png';
+import StyledButton from './StyledButton';
 
 const MotionContainer = motion(Container);
 const MotionFlex = motion(Flex);
@@ -30,7 +31,7 @@ const Navbar = () => {
             transition={{ duration: 0.5 }}
         >
             <MotionFlex
-                h={12}
+                h={14}
                 alignItems={'center'}
                 justifyContent={'space-between'}
                 initial={{ opacity: 0 }}
@@ -81,18 +82,13 @@ const Navbar = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5, duration: 0.5 }}
                     >
+
                         <ColorModeSwitch />
+
                     </MotionBox>
-                    <Button
-                        colorScheme="teal"
-                        borderRadius='3xl'
-                        variant="outline"
-                        as={motion.button}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                    >
-                        Contact us
-                    </Button>
+
+                    <StyledButton />
+
                 </MotionFlex>
             </MotionFlex>
         </MotionContainer>

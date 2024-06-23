@@ -1,15 +1,14 @@
-import { Box, Button, Flex, HStack, Image, Stat, StatLabel, StatNumber, Text, VStack } from '@chakra-ui/react';
+import { Box, Button, Flex, HStack, Stat, StatLabel, StatNumber, Text, VStack } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import AnimatedNumber from '../animation/number';
 import TopCreators from './TopCreators';
 import { GoNorthStar } from "react-icons/go";
 import HeroCard from './HeroCard';
+import AnimatedNumber from '../animation/AnimatedNumber';
 
 
 const MotionBox = motion(Box);
 const MotionText = motion(Text);
 const MotionButton = motion(Button);
-const MotionImage = motion(Image);
 const MotionFlex = motion(Flex);
 const MotionVStack = motion(VStack);
 const MotionHStack = motion(HStack);
