@@ -1,4 +1,4 @@
-import { Flex, VStack, Button, HStack, Stat, StatLabel, StatNumber, Text, Box, Image } from '@chakra-ui/react';
+import { Flex, VStack, Button, HStack, Stat, StatLabel, StatNumber, Text, Box, Image, Container, useColorModeValue } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import AnimatedNumber from '../animation/number';
 import avater1 from '../../assets/avater1.jpg'
@@ -14,6 +14,7 @@ const MotionFlex = motion(Flex);
 const MotionVStack = motion(VStack);
 const MotionHStack = motion(HStack);
 const MotionStat = motion(Stat);
+const MotionContainer = motion(Container);
 
 const Home = () => {
     return (
@@ -112,33 +113,66 @@ const Home = () => {
             </MotionFlex>
             <MotionBox
                 mt={10}
+                mx={20}
                 py={5}
                 borderRadius="lg"
+                bg={useColorModeValue('RGBA(0, 0, 0, 0.06)', 'RGBA(0, 0, 0, 0.36)')}
+                // borderRadius='40px'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
             >
-                <MotionFlex justify="space-around" align="center" direction={{ base: 'column', md: 'row' }}>
-                    <MotionVStack initial={{ scale: 0.9 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }}>
-                        <Image borderRadius="full" boxSize="50px" src={avater1} alt="Ingrid" />
-                        <Text>Ingrid</Text>
-                        <Text>$<AnimatedNumber from={0} to={16890} /></Text>
+                <MotionText mx={12} mb={5}>Top Creator of this week</MotionText>
+
+                <MotionFlex justify='space-around' align="center" direction={{ base: 'column', md: 'row' }}>
+                    <MotionVStack
+                        initial={{ scale: 0.9 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        flexDirection={{ base: 'column', lg: 'row' }}>
+                        <Image borderRadius="full" boxSize="100px" src={avater1} alt="Ingrid" />
+                        <Box>
+                            <Text>Ingrid</Text>
+                            <Text>$<AnimatedNumber from={0} to={16890} /></Text>
+                        </Box>
                     </MotionVStack>
-                    <MotionVStack initial={{ scale: 0.9 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }}>
-                        <Image borderRadius="full" boxSize="50px" src={avater2} alt="Sash" />
-                        <Text>Sash</Text>
-                        <Text>$ <AnimatedNumber from={0} to={8876} /></Text>
+
+                    <MotionVStack
+                        initial={{ scale: 0.9 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        flexDirection={{ base: 'column', lg: 'row' }}>
+                        <Image borderRadius="full" boxSize="100px" src={avater2} alt="Sash" />
+                        <Box>
+                            <Text>Sash</Text>
+                            <Text>$ <AnimatedNumber from={0} to={8876} /></Text>
+                        </Box>
                     </MotionVStack>
-                    <MotionVStack initial={{ scale: 0.9 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }}>
-                        <Image borderRadius="full" boxSize="50px" src={avater3} alt="John" />
-                        <Text>John</Text>
-                        <Text>$<AnimatedNumber from={0} to={7876} /></Text>
+
+                    <MotionVStack
+                        initial={{ scale: 0.9 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        flexDirection={{ base: 'column', lg: 'row' }}>
+                        <Image borderRadius="full" boxSize="100px" src={avater3} alt="John" />
+                        <Box>
+                            <Text>John</Text>
+                            <Text>$<AnimatedNumber from={0} to={7876} /></Text>
+                        </Box>
                     </MotionVStack>
-                    <MotionVStack initial={{ scale: 0.9 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }}>
-                        <Image borderRadius="full" boxSize="50px" src={avater4} alt="Karafu" />
-                        <Text>Karafu</Text>
-                        <Text>$ <AnimatedNumber from={0} to={10876} /></Text>
+
+                    <MotionVStack
+                        initial={{ scale: 0.9 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        flexDirection={{ base: 'column', lg: 'row' }}>
+                        <Image borderRadius="full" boxSize="100px" src={avater4} alt="Karafu" />
+                        <Box>
+                            <Text>Karafu</Text>
+                            <Text>$ <AnimatedNumber from={0} to={10876} /></Text>
+                        </Box>
                     </MotionVStack>
+
                 </MotionFlex>
             </MotionBox>
         </MotionBox>
