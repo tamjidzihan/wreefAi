@@ -1,8 +1,8 @@
-import { Box, Button, Container, Flex, HStack, Link, useColorModeValue, Image, useColorMode } from '@chakra-ui/react';
+import { Box, Container, Flex, HStack, Image, Link, useColorMode, useColorModeValue } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import ColorModeSwitch from './ColorModeSwitch';
 import logo_dark from '../../assets/logoicon_dark@1x.png';
 import logo_light from '../../assets/logoicon_light@1x.png';
+import ColorModeSwitch from './ColorModeSwitch';
 import StyledButton from './StyledButton';
 
 const MotionContainer = motion(Container);
@@ -21,11 +21,9 @@ const Navbar = () => {
             borderRadius="30px"
             px={6}
             my={4}
-            position='sticky'
-            top='0'
             zIndex='99'
             backdropFilter="auto"
-            backdropBlur="22px"
+            backdropBlur="10px"
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}

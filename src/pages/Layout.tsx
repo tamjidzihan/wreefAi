@@ -1,4 +1,4 @@
-import { Grid, GridItem } from '@chakra-ui/react'
+import { Box, Grid, GridItem } from '@chakra-ui/react'
 import { Outlet } from 'react-router-dom'
 import Navbar from '../components/navbar/NavBar'
 
@@ -9,10 +9,16 @@ const Layout = () => {
             <Grid templateAreas={
                 `"nav nav"
                 "main main"`
-            }>
+            }
+                bgGradient='linear-gradient(26deg, rgba(42, 26, 160, 1) 0%, rgba(99, 0, 212, 1) 48%, rgba(238, 130, 220, 1) 100%);'
+            >
 
                 {/* ===== NavBar start ===== */}
-                <GridItem area='nav'>
+                <GridItem
+                    area='nav'
+                    position='sticky'
+                    top='0'
+                >
                     <Navbar />
                 </GridItem>
                 {/* ===== NavBar End ===== */}

@@ -1,17 +1,18 @@
 import { extendTheme, ThemeConfig } from "@chakra-ui/react";
-import '@fontsource/space-mono/400.css';
-import '@fontsource/space-mono/700.css';
-
+import '@fontsource/paytone-one';
+import '@fontsource-variable/readex-pro/hexp.css';
 
 const config: ThemeConfig = {
-    initialColorMode: 'dark'
+  initialColorMode: 'dark'
 }
 
 const theme = extendTheme({
-    config,
-    fonts: {
-        heading: `'Space Mono', sans-serif`,
-        body: `'Space Mono', sans-serif`,
-      },
+  config,
+  fonts: {
+    heading: `'Paytone One', sans-serif`,
+    body: `'Readex Pro Variable', sans-serif`,
+  },
 })
 export default theme
+
+

@@ -1,12 +1,14 @@
-import { Box, Button, Flex, HStack, Stat, StatLabel, StatNumber, Text, VStack } from '@chakra-ui/react';
+import { Box, Button, Flex, HStack, Heading, Stat, StatLabel, StatNumber, Text, VStack } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import TopCreators from './TopCreators';
 import { GoNorthStar } from "react-icons/go";
 import HeroCard from './HeroCard';
 import AnimatedNumber from '../animation/AnimatedNumber';
+import Particle from '../animation/Particle';
 
 
 const MotionBox = motion(Box);
+const MotionHeading = motion(Heading);
 const MotionText = motion(Text);
 const MotionButton = motion(Button);
 const MotionFlex = motion(Flex);
@@ -17,6 +19,7 @@ const MotionStat = motion(Stat);
 const Home = () => {
     return (
         <MotionBox py={10} px={5} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+            <Particle />
             <MotionFlex
                 direction={{ base: 'column', lg: 'row' }}
                 justify="space-between"
@@ -38,9 +41,9 @@ const Home = () => {
                     <MotionText color="yellow.400" fontSize="sm">
                         NFT MARKET
                     </MotionText>
-                    <MotionText fontSize="6xl" fontWeight="bold">
+                    <MotionHeading fontSize="6xl" fontWeight="bold">
                         Create your own NFT <Text as='u'>gallery</Text>
-                    </MotionText>
+                    </MotionHeading>
                     <MotionText fontSize="2xl">
                         NFT Marketplace brings artists and creators together on a single platform.
                     </MotionText>
@@ -88,35 +91,6 @@ const Home = () => {
                     </MotionHStack>
                 </MotionVStack>
 
-                {/* <MotionBox
-                    mt={{ base: 10, lg: 0 }}
-                    boxShadow="xl"
-                    borderRadius="lg"
-                    overflow="hidden"
-                    initial={{ scale: 0.9 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <MotionImage src="#" alt="NFT Image" />
-                    <MotionBox p={5} initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }}>
-                        <Text fontWeight="bold" fontSize="lg">SPACE SONG</Text>
-                        <Text>Remaining Time: 12h:35m:20s</Text>
-                        <Text>Highest Bid: 5.25 ETH</Text>
-                        <Button
-                            colorScheme='teal'
-                            variant='outline'
-                            borderRadius='3xl'
-                            mt={3}
-                            width="100%"
-                            as={motion.button}
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                        // transition={{ delay: 0.5, duration: 0.5 }}
-                        >
-                            Place A Bid
-                        </Button>
-                    </MotionBox>
-                </MotionBox> */}
                 <HeroCard />
 
             </MotionFlex>
