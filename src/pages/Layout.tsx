@@ -1,8 +1,15 @@
-import { Box, Grid, GridItem } from '@chakra-ui/react'
-import { Outlet } from 'react-router-dom'
-import Navbar from '../components/navbar/NavBar'
+import { Grid, GridItem, useColorMode } from '@chakra-ui/react';
+import { Outlet } from 'react-router-dom';
+import Navbar from '../components/navbar/NavBar';
 
 const Layout = () => {
+    const { colorMode } = useColorMode();
+    const gradient = colorMode === 'light'
+        ? ['linear(to-tr, teal.300, yellow.400)',
+            'linear(to-t, blue.200, teal.500)',
+            'linear(to-b, orange.100, purple.300)',]
+        : 'linear-gradient(26deg, rgba(18, 10, 78, 1) 0%, rgba(99, 0, 212, 1) 48%, rgba(138, 74, 128, 1) 100%);';
+
     return (
         <>
             {/* ===== Grid Layout start ===== */}
@@ -10,7 +17,7 @@ const Layout = () => {
                 `"nav nav"
                 "main main"`
             }
-                bgGradient='linear-gradient(26deg, rgba(42, 26, 160, 1) 0%, rgba(99, 0, 212, 1) 48%, rgba(238, 130, 220, 1) 100%);'
+                bgGradient={gradient}
             >
 
                 {/* ===== NavBar start ===== */}

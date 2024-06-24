@@ -1,4 +1,4 @@
-import { Button, Flex, VStack, HStack, Stat, Text, Box, Image } from "@chakra-ui/react";
+import { Button, Flex, VStack, HStack, Stat, Text, Box, Image, useColorModeValue } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import heroCardImage from '../../assets/hero_card.jpg'
 
@@ -11,7 +11,9 @@ const HeroCard = () => {
         <MotionBox
             mt={{ base: 10, lg: 0 }}
             boxShadow="xl"
-            borderRadius="lg"
+            borderRadius="30px"
+            bg={useColorModeValue('RGBA(0, 0, 0, 0.06)', 'RGBA(0, 0, 0, 0.36)')}
+            backdropBlur="10px"
             overflow="hidden"
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}

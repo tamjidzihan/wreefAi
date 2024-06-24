@@ -4,7 +4,6 @@ import TopCreators from './TopCreators';
 import { GoNorthStar } from "react-icons/go";
 import HeroCard from './HeroCard';
 import AnimatedNumber from '../animation/AnimatedNumber';
-import Particle from '../animation/Particle';
 
 
 const MotionBox = motion(Box);
@@ -19,7 +18,6 @@ const MotionStat = motion(Stat);
 const Home = () => {
     return (
         <MotionBox py={10} px={5} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-            <Particle />
             <MotionFlex
                 direction={{ base: 'column', lg: 'row' }}
                 justify="space-between"
@@ -47,6 +45,7 @@ const Home = () => {
                     <MotionText fontSize="2xl">
                         NFT Marketplace brings artists and creators together on a single platform.
                     </MotionText>
+
                     <MotionButton
                         colorScheme='teal'
                         variant='outline'
@@ -89,13 +88,20 @@ const Home = () => {
                             <StatLabel>Auction</StatLabel>
                         </MotionStat>
                     </MotionHStack>
+
                 </MotionVStack>
 
+                {/* ===== Hero Card start ===== */}
                 <HeroCard />
+                {/* ===== Hero Card End ===== */}
 
             </MotionFlex>
 
+
+            {/* ===== Top Creators  start ===== */}
             <TopCreators />
+            {/* ===== Top Creators End ===== */}
+
 
         </MotionBox>
     );
