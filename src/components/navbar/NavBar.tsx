@@ -60,6 +60,7 @@ const Navbar = () => {
                     </MotionFlex>
                     <MotionHStack
                         spacing={8}
+                        textTransform="uppercase"
                         display={{ base: 'none', md: 'flex' }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}

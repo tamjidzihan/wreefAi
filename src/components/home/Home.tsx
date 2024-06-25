@@ -39,8 +39,12 @@ const Home = () => {
                     <MotionText color="yellow.400" fontSize="sm">
                         NFT MARKET
                     </MotionText>
-                    <MotionHeading fontSize="6xl" fontWeight="bold">
-                        Create your own NFT <Text as='u'>gallery</Text>
+                    <MotionHeading
+                        fontSize="6xl"
+                        fontWeight="bold"
+                        textTransform="uppercase">
+                        Create your own NFT
+                        <Text as='u'>gallery</Text>
                     </MotionHeading>
                     <MotionText fontSize="2xl">
                         NFT Marketplace brings artists and creators together on a single platform.

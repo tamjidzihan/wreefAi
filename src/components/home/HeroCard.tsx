@@ -1,10 +1,13 @@
-import { Button, Flex, VStack, HStack, Stat, Text, Box, Image, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Image, Text, useColorModeValue } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import heroCardImage from '../../assets/hero_card.jpg'
+import heroCardImage from '../../assets/hero_card.jpg';
 
 
 const MotionBox = motion(Box);
 const MotionImage = motion(Image);
+
+
+
 
 const HeroCard = () => {
     return (
@@ -48,3 +51,7 @@ const HeroCard = () => {
 }
 
 export default HeroCard
+function useGSAP(arg0: () => void) {
+    throw new Error("Function not implemented.");
+}
+
