@@ -18,7 +18,7 @@ const RotatingImage = ({ imagrsrc }: RotatingImageProps) => {
                     x: 0,
                     opacity: 0.5, // Set to the desired opacity
                     duration: 1,
-                    ease: "power3.in",
+                    ease: "power2.out",
                     onComplete: () => {
                         gsap.to(rotatingImageRef.current, {
                             rotation: 360,
@@ -38,7 +38,7 @@ const RotatingImage = ({ imagrsrc }: RotatingImageProps) => {
             <Box
                 ref={rotatingImageRef}
                 position="absolute"
-                top="65%"
+                top="55%"
                 left="-75px" // Adjust the position as needed
                 transform="translateY(-50%)"
                 width="150px"

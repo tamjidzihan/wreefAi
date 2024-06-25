@@ -1,9 +1,8 @@
 import { Box, Button, Flex, Heading, Text, VStack } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-// import HeroCard from './HeroCard';
+import HeroCard from './HeroCard';
 import HeroCounter from './HeroCounter';
 import TopCreators from './TopCreators';
-import HeroCardTry from './HeroCardTry';
 
 
 const MotionBox = motion(Box);
@@ -15,7 +14,14 @@ const MotionVStack = motion(VStack);
 
 const Home = () => {
     return (
-        <MotionBox py={10} px={5} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+        <MotionBox
+            py={10}
+            px={5}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+        >
+
             <MotionFlex
                 direction={{ base: 'column', lg: 'row' }}
                 justify="space-between"
@@ -70,7 +76,7 @@ const Home = () => {
 
 
                 {/* ===== Hero Card start ===== */}
-                <HeroCardTry />
+                <HeroCard />
                 {/* ===== Hero Card End ===== */}
 
 

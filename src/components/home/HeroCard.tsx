@@ -1,11 +1,14 @@
 import { Box, Button, Image, Text, useColorModeValue } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import heroCardImage from '../../assets/hero_card.jpg';
+import rotatingImage from '../../assets/logo_dev.png';
+import RotatingImage from "../animation/RotatingImage";
+
 
 const MotionBox = motion(Box);
 const MotionImage = motion(Image);
 
-const HeroCard = () => {
+const HeroCardTry = () => {
     return (
         <MotionBox
             mt={{ base: 10, lg: 0 }}
@@ -13,16 +16,17 @@ const HeroCard = () => {
             borderRadius="30px"
             bg={useColorModeValue('RGBA(0, 0, 0, 0.06)', 'RGBA(0, 0, 0, 0.36)')}
             backdropBlur="10px"
-            overflow="hidden"
-            initial={{ scale: 0.9 }}
+            initial={{ scale: 0.5 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5 }}
+            position="relative"
         >
             <MotionImage
                 src={heroCardImage}
                 alt="NFT Image"
                 objectFit='cover'
                 boxSize='sm'
+                borderTopRadius='30px'
             />
             <MotionBox p={5} initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }}>
                 <Text fontWeight="bold" fontSize="lg">SPACE SONG</Text>
@@ -41,10 +45,11 @@ const HeroCard = () => {
                     Place A Bid
                 </Button>
             </MotionBox>
+
+            <RotatingImage imagrsrc={rotatingImage} />
+
         </MotionBox>
-    )
-}
+    );
+};
 
-export default HeroCard
-
-
+export default HeroCardTry;
