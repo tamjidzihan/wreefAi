@@ -1,9 +1,9 @@
-import { Box, Button, Flex, HStack, Heading, Stat, StatLabel, StatNumber, Text, VStack } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Text, VStack } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+// import HeroCard from './HeroCard';
+import HeroCounter from './HeroCounter';
 import TopCreators from './TopCreators';
-import { GoNorthStar } from "react-icons/go";
-import HeroCard from './HeroCard';
-import AnimatedNumber from '../animation/AnimatedNumber';
+import HeroCardTry from './HeroCardTry';
 
 
 const MotionBox = motion(Box);
@@ -12,8 +12,6 @@ const MotionText = motion(Text);
 const MotionButton = motion(Button);
 const MotionFlex = motion(Flex);
 const MotionVStack = motion(VStack);
-const MotionHStack = motion(HStack);
-const MotionStat = motion(Stat);
 
 const Home = () => {
     return (
@@ -62,42 +60,19 @@ const Home = () => {
                         Start Collecting
                     </MotionButton>
 
-                    <MotionHStack spacing={12} mt={8} >
 
-                        <MotionStat initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3, duration: 0.5 }}>
-                            <StatNumber>
-                                <AnimatedNumber from={0} to={44} />
-                                K
-                            </StatNumber>
-                            <StatLabel>ArtWork</StatLabel>
-                        </MotionStat>
+                    {/* ===== Hero Counter  start ===== */}
+                    <HeroCounter />
+                    {/* ===== Hero Counter  End ===== */}
 
-                        <GoNorthStar color='gold' fontSize='20px' />
-
-                        <MotionStat initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6, duration: 0.5 }}>
-                            <StatNumber>
-                                <AnimatedNumber from={0} to={65} />
-                                k
-                            </StatNumber>
-                            <StatLabel>Artist</StatLabel>
-                        </MotionStat>
-
-                        <GoNorthStar color='gold' fontSize='20px' />
-
-                        <MotionStat initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9, duration: 0.5 }}>
-                            <StatNumber>
-                                <AnimatedNumber from={0} to={90} />
-                                k+
-                            </StatNumber>
-                            <StatLabel>Auction</StatLabel>
-                        </MotionStat>
-                    </MotionHStack>
 
                 </MotionVStack>
 
+
                 {/* ===== Hero Card start ===== */}
-                <HeroCard />
+                <HeroCardTry />
                 {/* ===== Hero Card End ===== */}
+
 
             </MotionFlex>
 
