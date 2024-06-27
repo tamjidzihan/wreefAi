@@ -22,7 +22,7 @@ const Creators = [
 const TopCreators = () => {
     return (
         <MotionBox
-            mt={10}
+            mt={20}
             mx={20}
             py={5}
             bg={useColorModeValue('RGBA(0, 0, 0, 0.06)', 'RGBA(0, 0, 0, 0.36)')}

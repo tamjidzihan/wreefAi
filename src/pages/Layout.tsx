@@ -19,6 +19,7 @@ const Layout = () => {
                     area='nav'
                     position='sticky'
                     top='0'
+                    zIndex='9999'
                 >
                     <Navbar />
                 </GridItem>

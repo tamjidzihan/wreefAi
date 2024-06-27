@@ -1,9 +1,9 @@
-import { Box, Button, Flex, Heading, Text, VStack } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Icon, Text, VStack } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import { FaMinus } from "react-icons/fa";
 import HeroCard from './HeroCard';
 import HeroCounter from './HeroCounter';
 import TopCreators from './TopCreators';
-
 
 const MotionBox = motion(Box);
 const MotionHeading = motion(Heading);
@@ -40,9 +40,11 @@ const Home = () => {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.5 }}
                 >
+
                     <MotionText color="yellow.400" fontSize="sm">
-                        NFT MARKET
+                        <Icon as={FaMinus} /> NFT MARKET
                     </MotionText>
+
                     <MotionHeading
                         fontSize="6xl"
                         fontWeight="bold"

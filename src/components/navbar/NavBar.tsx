@@ -21,9 +21,8 @@ const Navbar = () => {
             borderRadius="30px"
             px={6}
             my={4}
-            zIndex='99'
             backdropFilter="auto"
-            backdropBlur="10px"
+            backdropBlur="8px"
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
