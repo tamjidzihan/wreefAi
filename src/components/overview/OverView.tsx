@@ -13,7 +13,7 @@ const Overview = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            mt={{ base: 0, lg: 20 }}
+            mt={20}
         >
             <MotionHeading as="h1" size="2xl" textAlign="center" mb={4}>
                 Overview

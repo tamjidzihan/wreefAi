@@ -11,7 +11,7 @@ const CallToAction = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             textAlign="center"
-            mt={{ base: 0, lg: 20 }}
+            mt={20}
         >
             <MotionHeading as="h2" size="xl" mb={4}>
                 Get Started Today!
