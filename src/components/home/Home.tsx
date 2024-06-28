@@ -4,6 +4,13 @@ import { FaMinus } from "react-icons/fa";
 import HeroCard from './HeroCard';
 import HeroCounter from './HeroCounter';
 import TopCreators from './TopCreators';
+import Overview from '../overview/OverView';
+import Services from '../services/Services';
+import Results from '../results/Results';
+import Testimonials from '../testimonials/Testimonials';
+import Procedures from '../procedures/Procedures';
+import CallToAction from '../calltoaction/CallToAction';
+import Faqs from '../faqs/Faqs';
 
 const MotionBox = motion(Box);
 const MotionHeading = motion(Heading);
@@ -89,6 +96,14 @@ const Home = () => {
             <TopCreators />
             {/* ===== Top Creators End ===== */}
 
+
+            <Overview />
+            <Services />
+            <Results />
+            <Testimonials />
+            <Procedures />
+            <CallToAction />
+            <Faqs />
 
         </MotionBox>
     );
