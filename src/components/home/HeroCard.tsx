@@ -38,7 +38,7 @@ const HeroCardTry = () => {
                     src={heroCardImage}
                     alt="NFT Image"
                     objectFit='cover'
-                    boxSize='sm'
+                    boxSize={{ base: '270px', lg: 'sm' }}
                     borderTopRadius='30px'
                 />
                 <MotionBox

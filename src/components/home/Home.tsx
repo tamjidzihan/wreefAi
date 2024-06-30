@@ -23,7 +23,7 @@ const Home = () => {
     return (
         <MotionBox
             py={10}
-            px={5}
+            px={{ base: 0, lg: 5 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -57,7 +57,7 @@ const Home = () => {
                         fontWeight="bold"
                         textTransform="uppercase">
                         Create your own NFT
-                        <Text as='u'>gallery</Text>
+                        <Text as='u'> gallery </Text>
                     </MotionHeading>
                     <MotionText fontSize="2xl">
                         NFT Marketplace brings artists and creators together on a single platform.
@@ -77,7 +77,7 @@ const Home = () => {
 
 
                     {/* ===== Hero Counter  start ===== */}
-                    <HeroCounter />
+                    {/* <HeroCounter /> */}
                     {/* ===== Hero Counter  End ===== */}
 
 
@@ -93,17 +93,17 @@ const Home = () => {
 
 
             {/* ===== Top Creators  start ===== */}
-            <TopCreators />
+            {/* <TopCreators /> */}
             {/* ===== Top Creators End ===== */}
 
 
-            <Overview />
+            {/* <Overview />
             <Services />
             <Results />
             <Testimonials />
             <Procedures />
             <CallToAction />
-            <Faqs />
+            <Faqs /> */}
 
         </MotionBox>
     );

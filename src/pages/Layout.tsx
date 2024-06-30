@@ -1,7 +1,6 @@
 import { Grid, GridItem, useColorMode } from '@chakra-ui/react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../components/navbar/NavBar';
-import bgImage from '../assets/bg.jpg'
 
 const Layout = () => {
     const { colorMode } = useColorMode();
