@@ -53,13 +53,13 @@ const Home = () => {
                     </MotionText>
 
                     <MotionHeading
-                        fontSize="6xl"
+                        fontSize={{ base: '5xl', lg: '6xl' }}
                         fontWeight="bold"
                         textTransform="uppercase">
                         Create your own NFT
                         <Text as='u'> gallery </Text>
                     </MotionHeading>
-                    <MotionText fontSize="2xl">
+                    <MotionText fontSize={{ base: 'xl', lg: '2xl' }}>
                         NFT Marketplace brings artists and creators together on a single platform.
                     </MotionText>
 
@@ -77,7 +77,7 @@ const Home = () => {
 
 
                     {/* ===== Hero Counter  start ===== */}
-                    {/* <HeroCounter /> */}
+                    <HeroCounter />
                     {/* ===== Hero Counter  End ===== */}
 
 
@@ -93,17 +93,17 @@ const Home = () => {
 
 
             {/* ===== Top Creators  start ===== */}
-            {/* <TopCreators /> */}
+            <TopCreators />
             {/* ===== Top Creators End ===== */}
 
 
-            {/* <Overview />
+            <Overview />
             <Services />
             <Results />
             <Testimonials />
             <Procedures />
             <CallToAction />
-            <Faqs /> */}
+            <Faqs />
 
         </MotionBox>
     );

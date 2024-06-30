@@ -31,8 +31,12 @@ const TopCreators = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
         >
-            <MotionText mx={12} mb={5}>Top Creator of this week</MotionText>
-            <MotionFlex justify='space-around' align="center" direction={{ base: 'column', md: 'row' }}>
+            <MotionText mx={12} mb={5} textAlign={{ base: 'center', lg: 'start' }} >Top Creator of this week</MotionText>
+            <MotionFlex
+                justify='space-around'
+                align="center"
+                direction={{ base: 'column', md: 'row' }}
+            >
                 {Creators.map(creator => (
                     <MotionVStack
                         initial={{ scale: 0.9 }}
@@ -40,6 +44,7 @@ const TopCreators = () => {
                         transition={{ duration: 0.5 }}
                         flexDirection={{ base: 'column', lg: 'row' }}
                         key={creator.amount}
+                        mb={5}
                     >
                         <Image
                             borderRadius="full"
@@ -49,7 +54,9 @@ const TopCreators = () => {
                             mr={2} />
                         <Box>
                             <Text>{creator.name}</Text>
-                            <Text>$<AnimatedNumber from={0} to={creator.amount} /></Text>
+                            <Text> $
+                                <AnimatedNumber from={0} to={creator.amount} />
+                            </Text>
                         </Box>
                     </MotionVStack>
                 ))}
