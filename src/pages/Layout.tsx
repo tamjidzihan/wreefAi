@@ -13,8 +13,6 @@ const Layout = () => {
                 `"nav nav"
                 "main main"`
             }
-                bgImage={bgImage}
-                bgPosition="center"
             >
 
                 {/* ===== NavBar start ===== */}
