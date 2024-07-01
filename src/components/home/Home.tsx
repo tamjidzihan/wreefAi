@@ -64,7 +64,7 @@ const Home = () => {
                     </MotionText>
 
                     <MotionButton
-                        colorScheme='teal'
+                        colorScheme='purple'
                         variant='outline'
                         borderRadius='3xl'
                         size="lg"
@@ -96,9 +96,9 @@ const Home = () => {
             <TopCreators />
             {/* ===== Top Creators End ===== */}
 
-            {/* 
+
             <Overview />
-            <Services />
+            {/* <Services />
             <Results />
             <Testimonials />
             <Procedures />

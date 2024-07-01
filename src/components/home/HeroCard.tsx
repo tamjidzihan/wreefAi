@@ -20,7 +20,7 @@ const HeroCardTry = () => {
                 borderRadius="30px"
                 borderRight='2px solid'
                 borderBottom='2px solid'
-                borderColor="teal.500"
+                borderColor="purple.500"
                 zIndex={0}
             />
             <MotionBox
@@ -52,7 +52,7 @@ const HeroCardTry = () => {
                     <Text>Remaining Time: 12h:35m:20s</Text>
                     <Text>Highest Bid: 5.25 ETH</Text>
                     <Button
-                        colorScheme='teal'
+                        colorScheme='purple'
                         variant='outline'
                         borderRadius='3xl'
                         mt={3}

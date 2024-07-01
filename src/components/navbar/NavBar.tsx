@@ -65,10 +65,10 @@ const Navbar = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5, duration: 0.5 }}
                     >
-                        <Link href={'#'}>Our services</Link>
-                        <Link href={'#'}>Why us</Link>
-                        <Link href={'#'}>Reviews</Link>
-                        <Link href={'#'}>About</Link>
+                        <Link href={'#'}>Our Services</Link>
+                        <Link href={'#'}>Results</Link>
+                        <Link href={'#'}>Procedures</Link>
+                        <Link href={'#'}>Faqs</Link>
                     </MotionHStack>
                 </MotionHStack>
 
