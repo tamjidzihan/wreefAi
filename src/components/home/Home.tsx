@@ -96,14 +96,14 @@ const Home = () => {
             <TopCreators />
             {/* ===== Top Creators End ===== */}
 
-
+            {/* 
             <Overview />
             <Services />
             <Results />
             <Testimonials />
             <Procedures />
             <CallToAction />
-            <Faqs />
+            <Faqs /> */}
 
         </MotionBox>
     );
