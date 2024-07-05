@@ -12,6 +12,7 @@ const Layout = () => {
                 `"nav nav"
                 "main main"`
             }
+                bg='black'
             >
 
                 {/* ===== NavBar start ===== */}

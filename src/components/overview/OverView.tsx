@@ -15,7 +15,7 @@ const Overview = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            my='100px'
+            mt='100px'
         >
             <MotionFlex
                 direction={{ base: 'column', lg: 'row' }}

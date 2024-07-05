@@ -1,24 +1,22 @@
-import { Box, Heading, Text } from '@chakra-ui/react';
+import { Box, Container, Flex, Heading, Link, Stack, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import TestimonialSliders from './TestimonialSliders';
 
-const MotionBox = motion(Box);
-const MotionHeading = motion(Heading);
 
 const Testimonials = () => {
     return (
-        <MotionBox
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            mt={20}
-        >
-            <MotionHeading as="h2" size="xl" mb={4}>
-                Testimonials
-            </MotionHeading>
-            <Text fontSize="lg">
-                Hear what our clients have to say about us.
-            </Text>
-        </MotionBox>
+        <Box h="full" w="full" bg="black" mt={20}>
+            <Stack spacing={2} align={"center"}>
+                <Heading >Our Clients Speak</Heading>
+                <Text >
+                    We have been working with clients around the world
+                </Text>
+            </Stack>
+
+            <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
+                <TestimonialSliders />
+            </Container>
+        </Box>
     );
 };
 

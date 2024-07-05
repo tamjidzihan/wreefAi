@@ -17,10 +17,12 @@
     "@fontsource/paytone-one": "^5.0.20",
     "@fontsource/space-mono": "^5.0.20",
     "@react-spring/web": "^9.7.3",
+    "chakra-framer-carousel": "^0.5.0",
     "framer-motion": "^11.2.11",
     "gsap": "^3.12.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-feather": "^2.0.10",
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.10.0"
   },
