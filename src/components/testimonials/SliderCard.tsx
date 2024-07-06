@@ -31,13 +31,13 @@ const SliderCard = (
                         w={'50px'}
                         objectFit='cover'
                     />
-                    <Stack mt='6' spacing='3'>
+                    <Stack mt='4' spacing='3'>
                         <Heading size='md'>{heading}</Heading>
+                        <Text color='blue.600' fontSize='lg'>
+                            {title}
+                        </Text>
                         <Text>
                             {text}
-                        </Text>
-                        <Text color='blue.600' fontSize='2xl'>
-                            {title}
                         </Text>
                     </Stack>
                 </CardBody>
