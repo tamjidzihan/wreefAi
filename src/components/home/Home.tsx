@@ -109,9 +109,14 @@ const Home = () => {
             {/* ===== Services End ===== */}
 
 
+            {/* ===== Testimonials start ===== */}
             <Testimonials />
-            <Faqs />
+            {/* ===== Testimonials End ===== */}
 
+
+            {/* ===== Faqs start ===== */}
+            <Faqs />
+            {/* ===== Faqs End ===== */}
 
             {/* <Results />
             <Procedures />
