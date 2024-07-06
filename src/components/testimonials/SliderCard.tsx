@@ -15,19 +15,21 @@ const SliderCard = (
     return (
         <HStack
             w="90%"
-            h="200px"
-            bg={bg}
-            border="cyan.700"
             alignContent="center"
             justifyContent="center"
             mx="4"
         >
-            <Card maxW='sm'>
+            <Card
+                maxW='sm'
+                borderRadius='20px'>
                 <CardBody>
                     <Image
                         src={src}
                         alt={name}
                         borderRadius='lg'
+                        h={'60px'}
+                        w={'50px'}
+                        objectFit='cover'
                     />
                     <Stack mt='6' spacing='3'>
                         <Heading size='md'>{heading}</Heading>
@@ -35,7 +37,7 @@ const SliderCard = (
                             {text}
                         </Text>
                         <Text color='blue.600' fontSize='2xl'>
-                            $450
+                            {title}
                         </Text>
                     </Stack>
                 </CardBody>
@@ -43,10 +45,7 @@ const SliderCard = (
                 <CardFooter>
                     <ButtonGroup spacing='2'>
                         <Button variant='solid' colorScheme='blue'>
-                            Buy now
-                        </Button>
-                        <Button variant='ghost' colorScheme='blue'>
-                            Add to cart
+                            Reade More
                         </Button>
                     </ButtonGroup>
                 </CardFooter>
