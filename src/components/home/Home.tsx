@@ -110,11 +110,13 @@ const Home = () => {
 
 
             <Testimonials />
+            <Faqs />
+
 
             {/* <Results />
             <Procedures />
             <CallToAction />
-            <Faqs /> */}
+            */}
 
         </MotionBox>
     );
