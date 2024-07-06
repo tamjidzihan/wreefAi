@@ -1,4 +1,4 @@
-export interface data {
+export interface slidersDataProps {
     name: string;
     title: string;
     bg: string;
@@ -7,7 +7,7 @@ export interface data {
     text: string;
 }
 
-export const slidersData: data[] = [
+const slidersData: slidersDataProps[] = [
     {
         name: "Jane Cooper",
         title: "CEO at ABC Corporation",

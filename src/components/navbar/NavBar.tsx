@@ -54,7 +54,7 @@ const Navbar = () => {
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ duration: 0.5 }}
                         >
-                            Wreef Ai
+                            Wreef Create
                         </MotionBox>
                     </MotionFlex>
                     <MotionHStack
