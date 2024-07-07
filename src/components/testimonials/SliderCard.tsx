@@ -1,4 +1,4 @@
-import { Card, CardBody, HStack, Text, Image, Stack, Heading, CardFooter, Divider, Button, ButtonGroup } from "@chakra-ui/react";
+import { Card, CardBody, HStack, Text, Image, Stack, Heading, CardFooter, Divider, Button, ButtonGroup, useColorModeValue } from "@chakra-ui/react";
 import { slidersDataProps } from "./SliderData";
 
 
@@ -21,7 +21,9 @@ const SliderCard = (
         >
             <Card
                 maxW='sm'
-                borderRadius='20px'>
+                borderRadius='20px'
+                bg={useColorModeValue('RGBA(0, 0, 0, 0.06)', 'RGBA(0, 0, 0, 0.36)')}
+            >
                 <CardBody>
                     <Image
                         src={src}

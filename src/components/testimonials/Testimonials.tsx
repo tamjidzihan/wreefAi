@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Container, Heading, Stack, Text } from '@chakra-ui/react';
 import Sliders from './Slider';
 
 
@@ -12,7 +12,7 @@ const Testimonials = () => {
                 </Text>
             </Stack>
 
-            <Container maxW={"100%"} py={16}>
+            <Container maxW={{ base: '400px', lg: "100%" }} py={16}>
                 <Sliders />
             </Container>
         </Box>

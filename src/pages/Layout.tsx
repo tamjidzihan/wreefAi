@@ -12,7 +12,7 @@ const Layout = () => {
                 `"nav nav"
                 "main main"`
             }
-                bgGradient='linear-gradient(to-tr, #667eea 0%, #764ba2 100%)'
+            // bgGradient='linear-gradient(to-tr, #667eea 0%, #764ba2 100%)'
             >
 
                 {/* ===== NavBar start ===== */}
