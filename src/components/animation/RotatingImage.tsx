@@ -13,10 +13,10 @@ const RotatingImage = ({ imagrsrc }: RotatingImageProps) => {
     useEffect(() => {
         if (rotatingImageRef.current) {
             gsap.fromTo(rotatingImageRef.current,
-                { x: 200, opacity: 0 },  // Start position (off-screen to the right)
+                { x: 0, opacity: 0 },  // Start position (off-screen to the right)
                 {
                     x: 0,
-                    opacity: 0.5, // Set to the desired opacity
+                    opacity: 0.2, // Set to the desired opacity
                     duration: 1,
                     ease: "power2.out",
                     onComplete: () => {
@@ -38,12 +38,12 @@ const RotatingImage = ({ imagrsrc }: RotatingImageProps) => {
             <Box
                 ref={rotatingImageRef}
                 position="absolute"
-                top="55%"
-                left="-75px" // Adjust the position as needed
+                top="65%"
+                left="20px" // Adjust the position as needed
                 transform="translateY(-50%)"
-                width="150px"
-                height="150px"
-                overflow="hidden"
+                width="350px"
+                height="350px"
+                zIndex={-1}
             >
                 <Image
                     src={imagrsrc}
